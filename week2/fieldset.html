@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details Form</title>
+  <style>
+    /* Body styling to center the form */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #89f7fe, #66a6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Form container */
+    form {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    /* Fieldset styling */
+    fieldset {
+      background-color: #e0fff9;
+      padding: 30px;
+      border: 2px solid #00a99d;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    legend {
+      font-size: 1.4em;
+      font-weight: bold;
+      padding: 0 10px;
+      color: #00695c;
+    }
+
+    /* Inputs and layout */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    /* Radio buttons and labels */
+    label {
+      margin-right: 15px;
+      font-weight: normal;
+    }
+
+    .gender-group {
+      margin-bottom: 20px;
+    }
+
+    /* Submit button */
+    button {
+      background-color: #00a99d;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #007d73;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>User Information</legend>
+
+      <!-- Name -->
+      Name: <input type="text" name="name" required>
+
+      <!-- Email -->
+      Email: <input type="email" name="email" required>
+
+      <!-- Phone -->
+      Phone Number: <input type="tel" name="phone" required>
+
+      <!-- Age -->
+      Age: <input type="number" name="age">
+
+      <!-- Gender -->
+      <div class="gender-group">
+        Gender:<br>
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+</body>
+</html>

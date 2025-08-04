@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Form</title>
+  <style>
+    /* Gradient background */
+    body {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      font-family: Arial, sans-serif;
+      color: #333;
+      padding: 50px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 2.5em;
+    }
+
+    form {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      margin: 0 auto;
+      background-image: url("images/image.png")
+      
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: auto;
+      padding: 10px;
+      margin: auto;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Feedback Form</h2>
+
+  <form action="#" method="post" target="_blank">
+    <!-- Name -->
+    Name: <input type="text" name="name" required><br><br>
+
+    <!-- Email -->
+    Email: <input type="email" name="email" required><br><br>
+
+    <!-- Feedback Message -->
+    Feedback:<br>
+    <textarea name="message" rows="5" cols="40" required align="center"></textarea><br><br>
+
+    <!-- Satisfaction Level -->
+    How satisfied are you?<br>
+    <input type="radio" name="satisfaction" value="Satisfied" required align="left"> Satisfied<br>
+    <input type="radio" name="satisfaction" value="Neutral"> Neutral<br>
+    <input type="radio" name="satisfaction" value="Unsatisfied">Unsatisfied<br><br>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>    <button style="background-color: red" type="reset">reset</button>
+  </form>
+
+</body>
+</html>
