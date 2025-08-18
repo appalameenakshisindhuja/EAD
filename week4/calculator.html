@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<style>
+  body{display:flex;justify-content:center;align-items:center;height:100vh;background:linear-gradient(135deg,#6a11cb,#2575fc);font-family:sans-serif}
+  #calc{background:#fff;padding:20px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,.2);text-align:center}
+  input{width:220px;height:50px;font-size:22px;margin-bottom:15px;text-align:right;border:none;border-radius:10px;background:#f1f1f1;padding:5px 10px}
+  button{width:50px;height:50px;font-size:18px;margin:5px;border:none;border-radius:12px;cursor:pointer;transition:.2s}
+  button:hover{transform:scale(1.1)}
+  .op{background:#2575fc;color:#fff}
+  .eq{background:#28a745;color:#fff}
+  .clr{background:#dc3545;color:#fff}
+</style>
+</head>
+<body>
+<div id="calc">
+  <input id="out" readonly><br>
+  <div>
+    <button onclick="v('1')">1</button><button onclick="v('2')">2</button><button onclick="v('3')">3</button><button class="op" onclick="v('+')">+</button><br>
+    <button onclick="v('4')">4</button><button onclick="v('5')">5</button><button onclick="v('6')">6</button><button class="op" onclick="v('-')">-</button><br>
+    <button onclick="v('7')">7</button><button onclick="v('8')">8</button><button onclick="v('9')">9</button><button class="op" onclick="v('*')">×</button><br>
+    <button class="clr" onclick="c()">C</button><button onclick="v('0')">0</button><button class="eq" onclick="e()">=</button><button class="op" onclick="v('/')">÷</button>
+  </div>
+</div>
+<script>
+  let out=document.getElementById("out");
+  const v=x=>out.value+=x, c=()=>out.value="", e=()=>out.value=eval(out.value)
+</script>
+</body>
+</html>
